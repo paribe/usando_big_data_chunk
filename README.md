@@ -38,7 +38,8 @@ O script lê o arquivo CSV em chunks, filtra as linhas desejadas e salva os resu
 
 ## Código de Exemplo
 
-```python
+```
+python
 import pandas as pd
 from datetime import datetime
 
@@ -63,6 +64,7 @@ for chunk in pd.read_csv(arquivo_csv, chunksize=chunk_size, usecols=campos_csv):
 resultado_final = pd.concat(dados_filtrados, ignore_index=True)
 resultado_final.to_csv("resultado_data_atual.csv", index=False)
 
+```
 
 # Benefícios do Uso de Chunks
 
